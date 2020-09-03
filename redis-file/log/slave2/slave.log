@@ -1,0 +1,51 @@
+[33712] 03 Sep 10:55:00.249 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[33712] 03 Sep 10:55:00.249 # Redis version=5.0.9, bits=64, commit=9414ab9b, modified=0, pid=33712, just started
+[33712] 03 Sep 10:55:00.249 # Configuration loaded
+[33712] 03 Sep 10:55:00.253 * Running mode=standalone, port=6381.
+[33712] 03 Sep 10:55:00.253 # Server initialized
+[33712] 03 Sep 10:55:00.253 * Ready to accept connections
+[33712] 03 Sep 10:55:00.254 * Connecting to MASTER 127.0.0.1:6379
+[33712] 03 Sep 10:55:00.254 * MASTER <-> REPLICA sync started
+[33712] 03 Sep 10:55:00.254 * Non blocking connect for SYNC fired the event.
+[33712] 03 Sep 10:55:00.254 * Master replied to PING, replication can continue...
+[33712] 03 Sep 10:55:00.254 * Partial resynchronization not possible (no cached master)
+[33712] 03 Sep 10:55:00.266 * Full resync from master: a96d08f134fe6cbf9ef9fb5e3c9b46152262b830:0
+[33712] 03 Sep 10:55:00.400 * MASTER <-> REPLICA sync: receiving 172 bytes from master
+[33712] 03 Sep 10:55:00.401 * MASTER <-> REPLICA sync: Flushing old data
+[33712] 03 Sep 10:55:00.402 * MASTER <-> REPLICA sync: Loading DB in memory
+[33712] 03 Sep 10:55:00.402 * MASTER <-> REPLICA sync: Finished with success
+[33712] 03 Sep 10:55:00.413 * Background append only file rewriting started by pid 14296
+[33712] 03 Sep 10:55:00.555 * AOF rewrite child asks to stop sending diffs.
+[33712] 03 Sep 10:55:00.655 # fork operation complete
+[33712] 03 Sep 10:55:00.669 * Background AOF rewrite terminated with success
+[33712] 03 Sep 10:55:00.669 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+[33712] 03 Sep 10:55:00.671 * Background AOF rewrite finished successfully
+[33712] 03 Sep 11:00:30.608 # Connection with master lost.
+[33712] 03 Sep 11:00:30.608 * Caching the disconnected master state.
+[33712] 03 Sep 11:00:31.172 * Connecting to MASTER 127.0.0.1:6379
+[33712] 03 Sep 11:00:31.172 * MASTER <-> REPLICA sync started
+[33712] 03 Sep 11:00:33.179 * Non blocking connect for SYNC fired the event.
+[33712] 03 Sep 11:00:33.179 # Sending command to master in replication handshake: -Writing to master: 找不到指定的模块。
+[33712] 03 Sep 11:00:33.186 * Connecting to MASTER 127.0.0.1:6379
+[33712] 03 Sep 11:00:33.186 * MASTER <-> REPLICA sync started
+[33712] 03 Sep 11:00:35.187 * Non blocking connect for SYNC fired the event.
+[33712] 03 Sep 11:00:35.187 # Sending command to master in replication handshake: -Writing to master: 找不到指定的模块。
+[33712] 03 Sep 11:00:35.197 * Connecting to MASTER 127.0.0.1:6379
+[33712] 03 Sep 11:00:35.197 * MASTER <-> REPLICA sync started
+[33712] 03 Sep 11:00:37.202 * Non blocking connect for SYNC fired the event.
+[33712] 03 Sep 11:00:37.202 # Sending command to master in replication handshake: -Writing to master: 找不到指定的模块。
+[33712] 03 Sep 11:00:37.210 * Connecting to MASTER 127.0.0.1:6379
+[33712] 03 Sep 11:00:37.210 * MASTER <-> REPLICA sync started
+[33712] 03 Sep 11:00:39.212 * Non blocking connect for SYNC fired the event.
+[33712] 03 Sep 11:00:39.212 # Sending command to master in replication handshake: -Writing to master: 找不到指定的模块。
+[33712] 03 Sep 11:00:39.221 * Connecting to MASTER 127.0.0.1:6379
+[33712] 03 Sep 11:00:39.221 * MASTER <-> REPLICA sync started
+[33712] 03 Sep 11:00:41.223 * Non blocking connect for SYNC fired the event.
+[33712] 03 Sep 11:00:41.223 # Sending command to master in replication handshake: -Writing to master: 找不到指定的模块。
+[33712] 03 Sep 11:00:41.235 * Connecting to MASTER 127.0.0.1:6379
+[33712] 03 Sep 11:00:41.235 * MASTER <-> REPLICA sync started
+[33712] 03 Sep 11:00:42.542 # User requested shutdown...
+[33712] 03 Sep 11:00:42.542 * Calling fsync() on the AOF file.
+[33712] 03 Sep 11:00:42.545 * Saving the final RDB snapshot before exiting.
+[33712] 03 Sep 11:00:42.548 * DB saved on disk
+[33712] 03 Sep 11:00:42.549 # Redis is now ready to exit, bye bye...

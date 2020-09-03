@@ -1,0 +1,25 @@
+[33992] 03 Sep 10:54:30.510 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+[33992] 03 Sep 10:54:30.510 # Redis version=5.0.9, bits=64, commit=9414ab9b, modified=0, pid=33992, just started
+[33992] 03 Sep 10:54:30.510 # Configuration loaded
+[33992] 03 Sep 10:54:30.515 * Running mode=standalone, port=6379.
+[33992] 03 Sep 10:54:30.515 # Server initialized
+[33992] 03 Sep 10:54:30.515 * Ready to accept connections
+[33992] 03 Sep 10:55:00.254 * Replica 127.0.0.1:6381 asks for synchronization
+[33992] 03 Sep 10:55:00.254 * Full resync requested by replica 127.0.0.1:6381
+[33992] 03 Sep 10:55:00.254 * Starting BGSAVE for SYNC with target: disk
+[33992] 03 Sep 10:55:00.266 * Background saving started by pid 36884
+[33992] 03 Sep 10:55:00.380 # fork operation complete
+[33992] 03 Sep 10:55:00.399 * Background saving terminated with success
+[33992] 03 Sep 10:55:00.400 * Synchronization with replica 127.0.0.1:6381 succeeded
+[33992] 03 Sep 10:56:49.691 * Replica 127.0.0.1:6380 asks for synchronization
+[33992] 03 Sep 10:56:49.691 * Full resync requested by replica 127.0.0.1:6380
+[33992] 03 Sep 10:56:49.691 * Starting BGSAVE for SYNC with target: disk
+[33992] 03 Sep 10:56:49.702 * Background saving started by pid 11840
+[33992] 03 Sep 11:00:29.978 # fork operation complete
+[33992] 03 Sep 11:00:29.999 * Background saving terminated with success
+[33992] 03 Sep 11:00:30.000 * Synchronization with replica 127.0.0.1:6380 succeeded
+[33992] 03 Sep 11:00:30.603 # User requested shutdown...
+[33992] 03 Sep 11:00:30.603 * Calling fsync() on the AOF file.
+[33992] 03 Sep 11:00:30.605 * Saving the final RDB snapshot before exiting.
+[33992] 03 Sep 11:00:30.608 * DB saved on disk
+[33992] 03 Sep 11:00:30.608 # Redis is now ready to exit, bye bye...

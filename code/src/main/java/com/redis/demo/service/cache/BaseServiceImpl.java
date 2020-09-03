@@ -24,4 +24,8 @@ public class BaseServiceImpl implements BaseService {
     public Object get(String key) {
         return jedisCluster.get(key);
     }
+
+
+    public void clusterInfo(){
+    }
 }
