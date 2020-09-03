@@ -1,4 +1,4 @@
-生成 redis   windows服务（通过services.msc查询是否生成）
+生成 redis   windows服务
 
 redis-server --service-install config/redis-6379.conf --service-name redis6379
 
@@ -28,32 +28,7 @@ redis-server --service-uninstall --service-name  redis6383
 redis-server --service-uninstall --service-name  redis6384
 
 
-redis-server --service-uninstall --service-name  redis-cluster-6379
+--查看windows服务查看是否启动成功
 
---查询端口
-
-netstat -ano|findstr "6379"
-
-netstat -ano|findstr "6380"
-
-netstat -ano|findstr "6381"
-
-netstat -ano|findstr "6382"
-
-netstat -ano|findstr "6383"
-
-netstat -ano|findstr "6384"
-
-
-
---kill 端口
-
-taskkill /pid 6379 /F
-
-
---启动redis集群
-
-redis-cli --cluster create 127.0.0.1:6379 127.0.0.1:6380 127.0.0.1:6381 127.0.0.1:6382 127.0.0.1:6383 127.0.0.1:6384 --cluster-replicas 1
-
-
-
+1.win+R
+2.services.msc

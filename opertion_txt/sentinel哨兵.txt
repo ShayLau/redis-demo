@@ -1,0 +1,9 @@
+
+#启动哨兵
+redis-server ./config/sentinel-config/sentinel-26379.conf --sentinel
+
+
+redis-server ./config/sentinel-config/sentinel-26380.conf --sentinel
+
+
+redis-server ./config/sentinel-config/sentinel-26381.conf --sentinel

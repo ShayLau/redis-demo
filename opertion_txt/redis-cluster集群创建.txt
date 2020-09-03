@@ -1,0 +1,29 @@
+
+--服务查询端口
+
+netstat -ano|findstr "6379"
+
+netstat -ano|findstr "6380"
+
+netstat -ano|findstr "6381"
+
+netstat -ano|findstr "6382"
+
+netstat -ano|findstr "6383"
+
+netstat -ano|findstr "6384"
+
+
+--kill 端口
+
+taskkill /pid 6379 /F
+
+
+
+
+--启动redis集群，基于redis服务已启动
+
+redis-cli --cluster create 127.0.0.1:6379 127.0.0.1:6380 127.0.0.1:6381 127.0.0.1:6382 127.0.0.1:6383 127.0.0.1:6384 --cluster-replicas 1
+
+
+

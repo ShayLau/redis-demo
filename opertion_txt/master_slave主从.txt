@@ -1,0 +1,19 @@
+#启动主从
+
+redis-server ./config/master-slave-config/6379.conf
+
+
+redis-server ./config/master-slave-config/6380.conf
+
+
+redis-server ./config/master-slave-config/6381.conf
+
+
+
+
+dir 文件路径错误导致的错误信息：
+
+Background AOF rewrite terminated with error
+[35044] 03 Sep 10:43:40.598 * Background append only file rewriting started by pid 35796
+[35044] 03 Sep 10:43:40.700 * AOF rewrite child asks to stop sending diffs.
+[35796] 03 Sep 10:43:41.238 # Error moving temp append only file on the final destination: 拒绝访问。
