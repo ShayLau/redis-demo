@@ -39,3 +39,10 @@
 [查看源码仓库](https://github.com/ShayLau/ElasticSearch-demo)
 
 https://www.yuque.com/sourlemon)
+
+
+
+### 项目交流
+
+[qq群](https://github.com/ShayLau/redis-demo/blob/master/img/Java%E7%BC%96%E7%A0%81%E6%97%A5%E5%BF%97%E7%BE%A4%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+
