@@ -1,0 +1,3 @@
+#Jedisson Single  单个服务器
+singleServerConfig:
+  address: "redis://127.0.0.1:6379"
