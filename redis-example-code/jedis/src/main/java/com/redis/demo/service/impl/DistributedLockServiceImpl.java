@@ -1,9 +1,11 @@
 package com.redis.demo.service.impl;
 
 import com.redis.demo.service.DistributedService;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisCluster;
 import redis.clients.jedis.params.SetParams;
 
 import java.util.Collections;
@@ -16,6 +18,8 @@ public class DistributedLockServiceImpl implements DistributedService {
 
     @Autowired
     private Jedis jedis;
+    @Autowired
+    private JedisCluster jedisCluster;
 
     /**
      * 锁成功
@@ -72,7 +76,8 @@ public class DistributedLockServiceImpl implements DistributedService {
         SetParams setParams = new SetParams();
         //key not exist、key expireTime
         setParams.nx().px(expireTime);
-        if (jedis.set(lockKey, requestId, setParams).equals(LOCK_SUCCESS)) {
+        String result = jedisCluster.set(lockKey, requestId, setParams);
+        if (Strings.isNotBlank(result) && result.equals(LOCK_SUCCESS)) {
             return true;
         }
         return false;
@@ -81,12 +86,18 @@ public class DistributedLockServiceImpl implements DistributedService {
     @Override
     public boolean unLock(String lockKey, String requestId) {
         //该方法容易导致分布式环境错误解锁
-        jedis.del(lockKey);
+        //Long result = jedisCluster.del(lockKey);
 
-        String luaScript = "";
+        ///脚本内容为,通过获取key的值和给定的requestId比较，如果相同则atomic的方式删除key,也就删除了Redislock
+        String luaScript = "if redis.call('get', KEYS[1]) == ARGV[1] " +
+                "then return redis.call('del', KEYS[1]) " +
+                "else return 0 end";
+        Object result = jedisCluster.eval(luaScript, Collections.singletonList(lockKey), Collections.singletonList(requestId));
 
-        Object result = jedis.eval(luaScript, Collections.singletonList(lockKey), Collections.singletonList(requestId));
         System.out.println(result);
-        return false;
+        if ("0".equals(result.toString())) {
+            return false;
+        }
+        return true;
     }
 }

@@ -30,11 +30,11 @@ public class LockController {
         String requestId = UUID.randomUUID().toString();
         log.info("redis distributed lock requestId:" + requestId);
         int expireTime = 1000 * 3 * 60;
-        System.out.println(distributedService.trySetKeyLock(lockKey, requestId, expireTime));
+        System.out.println("lock result:" + distributedService.trySetKeyLock(lockKey, requestId, expireTime));
     }
 
     @PostMapping("unlock")
     public void unLockKey(String requestId) {
-        System.out.println(distributedService.unLock(lockKey, requestId));
+        System.out.println("unlock reslult:" + distributedService.unLock(lockKey, requestId));
     }
 }
